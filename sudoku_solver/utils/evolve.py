@@ -5,6 +5,8 @@ from typing import List
 def evolve(population: List, lift_factor: float, verbose: bool) -> None:
     """Evolve a population of sudokus towards a valid solution.
 
+    TODO Refactor.
+
     Parameters
     ----------
     population : List[RandomSudoku]

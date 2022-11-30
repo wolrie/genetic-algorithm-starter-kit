@@ -87,7 +87,10 @@ class Population:
         return score/len(self._target_chromosome)
 
     def evolve(self, verbose: bool = True) -> None:
-        """Evolve towards a target chromosome."""
+        """Evolve towards a target chromosome.
+
+        TODO Refactor.
+        """
         if not self._target_chromosome:
             raise ValueError("Cannot evolve. Target chromosome missing.")
 

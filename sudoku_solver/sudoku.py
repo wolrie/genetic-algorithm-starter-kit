@@ -99,7 +99,13 @@ class Sudoku:
 
 
 class RandomSudoku(Sudoku):
-    """Helper class for solving sudokus with a genetic algorithm."""
+    """Helper class for solving sudokus with a genetic algorithm.
+
+    Sudokus instantiated with this class can be randomly filled at all
+    positions that where found empty at instantiation. Furthermore, any
+    instance of this class can reproduce, i.e. "mate" with another instance,
+    and spawn an offspring (another instance of this class).
+    """
 
     prob_cutoffs = {
         "self": 0.45,
