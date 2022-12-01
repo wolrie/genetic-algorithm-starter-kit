@@ -19,17 +19,13 @@ def evolve(population: List, lift_factor: float, verbose: bool) -> None:
     """
     def print_out(generation_count: int, fittest_sudoku):
         """Print out during evolution."""
-        if verbose:
-            separator = "\n"
-        else:
-            separator = "\r"
         print(
             f"GENERATION: {str(generation_count).zfill(7)} "
             f"FITNESS SCORES - total: {str(round(fittest_sudoku.fitness_score, 5)).zfill(7)} | "
             f"boxes: {str(round(fittest_sudoku.fitness_score_boxes, 5)).zfill(7)} | "
             f"cols: {str(round(fittest_sudoku.fitness_score_cols, 5)).zfill(7)} | "
             f"rows: {str(round(fittest_sudoku.fitness_score_rows, 5)).zfill(7)}",
-            end=separator,
+            end="\n" if verbose else "\r",
         )
 
     generation_count = 1

@@ -102,15 +102,11 @@ class Population:
 
         def print_out(generation_count: int, fittest_individual: Individual):
             """Print out during evolution."""
-            if verbose:
-                separator = "\n"
-            else:
-                separator = "\r"
             print(
                 f"GENERATION: {str(generation_count).zfill(7)}"
                 f"\tFITNESS SCORE: {str(round(self.fitness_score(fittest_individual), 4)).zfill(7)}"
                 f"\tFITTEST INDIVIDUAL: {fittest_individual.chromosome}",
-                sep=separator,
+                end="\n" if verbose else "\r",
             )
 
         while not target_found:
