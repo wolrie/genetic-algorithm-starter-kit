@@ -1,3 +1,5 @@
+"""Fitness scoring functions of sudokus for solving via a genetic algorithm."""
+
 from collections import Counter
 from typing import List
 

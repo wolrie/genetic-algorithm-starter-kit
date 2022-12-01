@@ -1,3 +1,5 @@
+"""Implementation of a genetic algorithm for solving sudokus."""
+
 import random
 from typing import List
 

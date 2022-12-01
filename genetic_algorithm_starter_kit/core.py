@@ -15,8 +15,9 @@ from typing import List
 
 class Organism:
 
-    GENES = '''abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOP
-    QRSTUVWXYZ1234567890, .-;:_!'"*#%&/()=?@${[]}'''
+    GENES = list(
+        """abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890,.-;:_!'"*#%&/()=?@${[]} """
+    )
 
     def __init__(self, chromosome: str = "") -> None:
         self.chromosome = chromosome

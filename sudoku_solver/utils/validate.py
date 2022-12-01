@@ -5,7 +5,7 @@ from sudoku_solver.etc import config
 
 
 def _is_valid_list(list_: List[str or int]) -> bool:
-    """ Check if list contains duplicates or invalid digits.
+    """Check if list contains duplicates or invalid digits.
 
     Parameters
     ----------
@@ -24,18 +24,18 @@ def _is_valid_list(list_: List[str or int]) -> bool:
 
 
 def are_valid_rows(board: List[List[int]]) -> bool:
-    """ Check sudoku's rows for validity according to rules. """
+    """Check sudoku's rows for validity according to rules."""
     return all([_is_valid_list(row) for row in board])
 
 
 def are_valid_cols(board: List[List[int]]) -> bool:
-    """ Check sudoku's columns for validity according to rules. """
+    """Check sudoku's columns for validity according to rules."""
     return all([_is_valid_list([row[i] for row in board])
                 for i in range(9)])
 
 
 def are_valid_boxes(board: List[List[int]]) -> bool:
-    """ Check sudoku's 3x3 sub-boxes for validity according to rules. """
+    """Check sudoku's 3x3 sub-boxes for validity according to rules."""
     flags = []
     for box_num in range(9):
         row, col = 3 * (box_num // 3), 3 * (box_num % 3)

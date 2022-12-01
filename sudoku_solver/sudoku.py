@@ -1,3 +1,5 @@
+"""A module for solving and validating sudokus."""
+
 from __future__ import annotations
 
 import copy
@@ -74,9 +76,12 @@ class Sudoku:
 
     def is_valid(self) -> bool:
         """Check if sudoku board is valid."""
-        return all([func(self.board) for func in [validate.are_valid_rows,
-                                                  validate.are_valid_cols,
-                                                  validate.are_valid_boxes]])
+        validation_funcs = [
+            validate.are_valid_rows,
+            validate.are_valid_cols,
+            validate.are_valid_boxes,
+        ]
+        return all([func(self.board) for func in validation_funcs])
 
     def solve(self) -> None:
         """Solve sudoku with backtracking algorithm."""
@@ -115,13 +120,13 @@ class RandomSudoku(Sudoku):
     def __init__(self, board: List[List[int]], empty_cell_coordinates: List[List[int]] = None) -> None:
         super().__init__(board)
         if empty_cell_coordinates is None:
-            self._empty_cell_coordinates = self._get_empty_cell_coordinates()
+            self._empty_cell_coordinates = self._get_all_empty_cell_coordinates()
         else:
             self._empty_cell_coordinates = empty_cell_coordinates
 
     @cache
-    def _get_empty_cell_coordinates(self) -> List[int]:
-        """Return coordinates of empty cells."""
+    def _get_all_empty_cell_coordinates(self) -> List[int]:
+        """Return coordinates of all empty cells."""
         coords = []
         for row, col in product(range(9), repeat=2):
             if self.board[row][col] == config.empty_cell_symbol:
