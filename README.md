@@ -2,13 +2,26 @@
 
 **A Crayon's Data Insights Knowledge Pill**
 
-The notebook `./genetic_algorithm.ipynb` briefly introduces an implementation of a genetic algorithm by example and showcases how to solve sudokus using this approach. All other available resources found in this repo are simply for providing functionalities used in the notebook.
+This repo contains a brief introduction to an implementation of a genetic algorithm by example and showcases how to solve sudokus using this approach.
 
-This repo has been created exclusively for a knowledge exchange within the Data Insights Team of [Crayon](https://www.crayon.com/at/).
+This repo was created exclusively for a knowledge exchange within the Data Insights Team of [Crayon](https://www.crayon.com/at/).
 
-### 1. Requirements
+## 0. Usage
+The entire repo revolves around the notebook `./intro_to_genetic_algorithms.ipynb`. Check it out and look through it. All other available resources found in this repo are simply for providing functionalities used in the notebook.
+
+## 1. Repo structure
+```
+.
+├── etc                             # Config files
+├── genetic_algorithm_starter_kit
+│   └── core.py                     # Core functionality for notebook's intro example
+├── sudoku_solver
+│   ├── data
+│   ├── etc
+│   ├── utils
+│   └── sudoku.py                   # Module for solving and validating sudokus
+├── README.md
+└── requirements.txt
+```
+## 2. Requirements
 This repo was developed with Python version 3.10.
-
-### 2. Repo structure
-
-TODO
