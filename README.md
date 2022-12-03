@@ -12,14 +12,16 @@ The entire repo revolves around the notebook `./intro_to_genetic_algorithms.ipyn
 ## 1. Repo structure
 ```
 .
-├── etc                             # Config files
+├── etc                                 # Config files
 ├── genetic_algorithm_starter_kit
-│   └── core.py                     # Core functionality for notebook's intro example
+│   └── core.py                         # Core functionality for notebook's intro example
 ├── sudoku_solver
 │   ├── data
 │   ├── etc
 │   ├── utils
-│   └── sudoku.py                   # Module for solving and validating sudokus
+│   └── sudoku.py                       # Module for solving and validating sudokus
+├── intro_to_genetic_algorithms.ipynb   # Notebook introducing genetic algorithms
+├── LICENSE
 ├── README.md
 └── requirements.txt
 ```
